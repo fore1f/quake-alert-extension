@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuakeAlert</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>QuakeAlert</h1>
+      <p class="subtitle">最新の地震情報</p>
+    </header>
+
+    <main id="quake-list">
+      <!-- 地震情報がここに挿入されます -->
+      <div class="loading">情報を取得中...</div>
+    </main>
+
+    <footer>
+      <p>データ提供: P2P地震情報</p>
+      <button id="test-btn" class="test-btn">テスト通知を送る</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "QuakeAlert - 緊急地震速報・地震情報",
+  "version": "1.0.0",
+  "description": "最新の地震情報と緊急地震速報（EEW）をデスクトップ通知とポップアップで表示します。",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://api.p2pquake.net/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "128": "icons/icon.png"
+    }
+  },
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  }
+}
