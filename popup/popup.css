@@ -38,6 +38,7 @@ header h1 {
   letter-spacing: -1px;
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -149,6 +150,10 @@ main {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
   border-color: var(--text-primary);
+}
+
+.test-btn.secondary {
+  margin-left: 5px;
 }
 
 @keyframes slideUp {

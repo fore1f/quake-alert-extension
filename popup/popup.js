@@ -12,10 +12,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         fetchAndRender();
     }
 
+    console.log('Popup loaded, setting up test buttons...');
     // テストボタンのイベント
-    document.getElementById('test-btn').addEventListener('click', () => {
-        chrome.runtime.sendMessage({ action: 'test-eew' });
-    });
+    const testBtn = document.getElementById('test-btn');
+    const testInvBtn = document.getElementById('test-inv-btn');
+
+    if (testBtn) {
+        testBtn.addEventListener('click', () => {
+            console.log('EEW test button clicked');
+            chrome.runtime.sendMessage({ action: 'test-eew' });
+        });
+    }
+    if (testInvBtn) {
+        testInvBtn.addEventListener('click', () => {
+            console.log('Investigating test button clicked');
+            chrome.runtime.sendMessage({ action: 'test-investigating' });
+        });
+    }
 });
 
 async function fetchAndRender() {
